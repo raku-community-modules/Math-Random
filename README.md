@@ -90,3 +90,4 @@ on the Mersenne Twister generator.
 * Provide constructors that also set the seed.
 * Ensure thread safety, or create a thread-safe wrapper
 * Provide higher-level methods
+* Tests? They won't be easy to pull off, so if anyone wants to PR...
