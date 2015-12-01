@@ -21,8 +21,6 @@ has Int $!index = $!n + 1;
 has Int $!lowerMask = (1 +< $!r) - 1;
 has Int $!upperMask = (+^$!lowerMask) +& ((1 +< $!w) - 1);
 
-has Int $!tane;
-
 submethod mt19937 {
   Math::Random::MT.new(
     w => 32,
@@ -55,7 +53,7 @@ submethod mt19937_64 {
     t => 37,
     c => 0xFFF7EEE000000000,
     l => 43,
-    f => 6364136223846793005;
+    f => 6364136223846793005
   );
 }
 
@@ -94,7 +92,9 @@ submethod twist {
 }
 
 method nxt(Int $bits) returns Int {
-  my $maxShift = $!w - 32;
-  die "$bits must be at most $maxShift" unless $bits <= $maxShift;
-  return (self.extract +> $bits) +& 0xFFFFFFFF;
+  die "\$bits must be at least 1" if $bits < 1;
+  if $bits > $!w {
+    return self.nxt($!w) + (self.nxt($bits - $!w) +< $!w);
+  }
+  return (self.extract +> ($!w - $bits)) +& ((1 +< $!w) - 1);
 }

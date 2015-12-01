@@ -24,8 +24,22 @@ multi method nextInt(Int $bound) returns Int {
   return $val;
 }
 
-method nextLong returns Int {
-  return (self.nxt(32) +< 32) + self.nxt(32);
+multi method nextLong returns Int {
+  return self.nxt(64);
+}
+
+multi method nextLong(Int $bound) returns Int {
+  die "$bound must be positive" if $bound <= 0;
+  if ($bound +& -$bound) == $bound { # if bound is a power of 2
+    return (($bound * self.nxt(63)) +> 63) +& 0xFFFF_FFFF_FFFF_FFFF;
+  }
+  my Int $bits;
+  my Int $val;
+  repeat {
+    $bits = self.nxt(63);
+    $val = $bits % $bound;
+  } while $bits - $val + $bound - 1 < 0;
+  return $val;
 }
 
 method nextBoolean returns Bool {
@@ -33,7 +47,7 @@ method nextBoolean returns Bool {
 }
 
 multi method nextDouble returns Num {
-  return Num.new(((self.nxt(26) +< 27) + self.nxt(27)) / (1 +< 53));
+  return self.nxt(53);
 }
 
 multi method nextDouble(Num $max) returns Num {
