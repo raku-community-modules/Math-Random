@@ -59,7 +59,7 @@ submethod mt19937_64 {
 
 method setSeed(Int $seed) {
   $!index = $!n;
-  @!state[0] = $seed;
+  @!state[0] = $seed +& ((1 +< $!w) - 1);
   loop (my int $i = 1; $i < $!n; $i = $i + 1) {
     my $prev = @!state[$i - 1];
     @!state[$i] = ($!f * ($prev +^ ($prev +> ($!w - 2))) + $i) +&
