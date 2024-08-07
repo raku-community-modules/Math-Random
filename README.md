@@ -125,7 +125,7 @@ TODO
 AUTHORS
 =======
 
-  * +merlan \#flirora
+  * Tae Lim Koo
 
   * Raku Community
 
