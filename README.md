@@ -125,14 +125,14 @@ TODO
 AUTHORS
 =======
 
-  * Tae Lim Koo
+  * +merlan #flirora
 
   * Raku Community
 
 COPYRIGHT AND LICENSE
 =====================
 
-Copyright 2015 - 2017 Tae Lim Koo
+Copyright 2015 - 2017 +merlan #flirora
 
 Copyright 2024 Raku Commuity
 

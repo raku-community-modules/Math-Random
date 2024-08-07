@@ -185,12 +185,12 @@ on the Mersenne Twister generator.
 
 =head1 AUTHORS
 
-=item Tae Lim Koo
+=item +merlan #flirora
 =item Raku Community
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2015 - 2017 Tae Lim Koo
+Copyright 2015 - 2017 +merlan #flirora
 
 Copyright 2024 Raku Commuity
 
