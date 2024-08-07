@@ -1,4 +1,6 @@
 Revision history for Math::Random
 
 {{$NEXT}}
+
+0.1.1  2024-08-07T16:24:32+02:00
     - Initial version in Raku Community Modules
