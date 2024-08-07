@@ -1,0 +1,10 @@
+use Test;
+use Math::Random;
+use Math::Random::JavaStyle;
+use Math::Random::MT;
+
+plan 1;
+
+pass "Module loaded";
+
+# vim: expandtab shiftwidth=4

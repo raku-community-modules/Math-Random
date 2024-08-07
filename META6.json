@@ -1,14 +1,30 @@
 {
-    "perl" : "6.*",
-    "name" : "Math::Random",
-    "version" : "0.1.0",
-    "description" : "Random numbers à la java.util.Random.",
-    "author" : "Tae Lim Kook",
-    "provides" : {
-        "Math::Random" : "lib/Math/Random.pm6",
-        "Math::Random::JavaStyle" : "lib/Math/Random/JavaStyle.pm6",
-        "Math::Random::MT" : "lib/Math/Random/MT.pm6"
-    },
-    "depends" : [ ],
-    "source-url" : "git://github.com/bluebear94/Math-Random.git"
+  "auth": "zef:raku-community-modules",
+  "authors": [
+    "Tae Lim Kook",
+    "Raku Community"
+  ],
+  "build-depends": [
+  ],
+  "depends": [
+  ],
+  "description": "Random numbers à la java.util.Random",
+  "license": "NOASSERTION",
+  "name": "Math::Random",
+  "perl": "6.d",
+  "provides": {
+    "Math::Random": "lib/Math/Random.rakumod",
+    "Math::Random::JavaStyle": "lib/Math/Random/JavaStyle.rakumod",
+    "Math::Random::MT": "lib/Math/Random/MT.rakumod"
+  },
+  "resources": [
+  ],
+  "source-url": "https://github.com/raku-community-modules/Math-Random.git",
+  "tags": [
+    "RANDOM",
+    "MATH"
+  ],
+  "test-depends": [
+  ],
+  "version": "0.1.1"
 }
