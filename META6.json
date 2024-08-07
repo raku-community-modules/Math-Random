@@ -1,7 +1,7 @@
 {
   "auth": "zef:raku-community-modules",
   "authors": [
-    "Tae Lim Kook",
+    "+merlan #flirora",
     "Raku Community"
   ],
   "build-depends": [
